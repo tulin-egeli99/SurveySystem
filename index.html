@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Anket Sistemi</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <h1>Online Anket Sistemi</h1>
+
+  <!-- Anket Oluşturma Formu -->
+  <section>
+    <h2>Anket Oluştur</h2>
+    <form id="survey-form">
+      <label for="title">Başlık:</label>
+      <input type="text" id="title" required>
+      <label for="description">Açıklama:</label>
+      <textarea id="description" required></textarea>
+      <label for="userName">Kullanıcı Adı:</label>
+      <input type="text" id="userName" required>
+
+      <h3>Sorular</h3>
+      <div id="questions-container">
+        <!-- Dinamik olarak buraya sorular eklenecek -->
+      </div>
+      <button type="button" id="add-question">Soru Ekle</button>
+      <button type="submit">Anketi Oluştur</button>
+    </form>
+  </section>
+
+  <!-- Anket Seçme ve Katılma Formu -->
+  <section>
+    <h2>Ankete Katıl</h2>
+    <form id="participation-form">
+      <label for="select-survey">Anket Seç:</label>
+      <select id="select-survey" required></select>
+      <div id="survey-questions-container">
+        <!-- Seçilen anketin soruları buraya yüklenecek -->
+      </div>
+      <label for="participant-name">Adınız:</label>
+      <input type="text" id="participant-name" required>
+      <button type="submit">Yanıtla</button>
+    </form>
+  </section>
+
+  <!-- Sonuçları Görüntüleme -->
+  <section>
+    <h2>Anket Sonuçları</h2>
+    <label for="results-survey-select">Sonuçları Görüntüle:</label>
+    <select id="results-survey-select" required></select>
+    <div id="results-container">
+      <!-- Sonuçlar buraya yüklenecek -->
+    </div>
+  </section>
+
+  <ul id="survey-list">
+    <!-- Oluşturulan anketlerin listesi buraya eklenecek -->
+  </ul>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
